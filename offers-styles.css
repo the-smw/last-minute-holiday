@@ -1,0 +1,400 @@
+/*====HELPER COLOrS====
+header {
+  background-color: green;
+}
+
+.item {
+  background-color: yellow;
+}
+
+footer {
+  background-color: teal;
+}*/
+
+
+/*-------------*\
+*
+*  BASE STYLES
+*
+\*-------------*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  background: url('assets/sai-kiran-anagani-83zRhEhFMfo-unsplash%20(1).jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+
+
+
+
+/*---------------*\
+*
+*  LAYOUT STYLES
+*
+\*---------------*/
+
+.container {
+  display: grid;
+  grid-template-columns: repeat (3, 1fr);
+  grid-template-rows: 12vh 1fr auto auto 8vh;
+  grid-template-areas: 
+    "header header header"
+    "headline headline headline"
+    "box1 box2 box3"
+    "box4 box5 box6"
+    "footer footer footer";
+  grid-gap: 1rem;
+  justify-items: center;
+  height: 100vh;
+}
+
+
+/*====HEADER STYLES====*/
+
+header {
+  grid-area: header;
+  height: 12vh;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70%;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+}
+
+section {
+  width: 11%;
+  margin-right: .5rem;
+}
+
+
+
+/*====CONTENT STYLES=====*/
+
+h1 {
+  grid-area: headline;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.item {
+  width: 30rem;
+  height: 35rem;
+  justify-self: center;
+  display: flex;
+  flex-flow: column wrap;
+  padding: .5rem;
+  position: relative;
+}
+
+
+.item {
+  border-radius: 1.5rem;
+}
+
+.item-1 {grid-area: box1;}
+.item-2 {grid-area: box2;}
+.item-3 {grid-area: box3;}
+.item-4 {grid-area: box4;}
+.item-5 {grid-area: box5;}
+.item-6 {grid-area: box6;}
+
+
+ul {
+  list-style-type: disc;
+  margin-left: 1.3rem;
+}
+
+
+
+/*====FOOTER STYLES====*/
+
+footer {
+  grid-area: footer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+
+
+
+/*====DESIGN====*/
+
+header, .item {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+footer {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.full {
+  z-index: 2;
+  position: absolute;
+  top: 5vh;
+  left: 0;
+  background-color: red;
+  width: 8vw;
+  transform: rotate(-40deg);
+}
+
+
+
+
+/*====TYPOGRAPHY====*/
+
+h1, h2, h3 {
+  font-family: 'Zilla Slab', serif;
+}
+
+h1, h3 {
+  text-align: center;
+  letter-spacing: .125rem;
+}
+
+h1 {
+  font-size: 2.3rem;
+  font-style: italic;
+  line-height: 1.3;
+  align-self: center;
+}
+
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: .5rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: .5rem;
+}
+
+
+small {
+  font-size: 1rem;
+  margin-left: 2.5rem;
+}
+
+
+li, p {
+  font-size: 1.1rem;
+  line-height: 1.2;
+  letter-spacing: .05rem;
+}
+
+li {
+  margin-bottom: .5rem;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+
+p {
+  font-family: 'Red Rose', cursive;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: .5rem;
+  color: #A66641
+}
+
+.full {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+
+section a {
+  font-size: 1.3rem;
+  padding: .3rem;
+  color: #ffffff;
+}
+
+
+.footer-small {
+  font-family: 'Zilla Slab', serif;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.2;
+  letter-spacing: .15rem;  
+}
+
+
+
+
+
+/*------------*\
+*
+*    IMAGES
+*
+\*------------*/
+
+#logo {
+  width: 5%;
+  height: auto;
+  display: inline-block;
+  padding: .5rem;
+  margin-left: .5rem;
+}
+
+.beach {
+  width: 95%;
+  height: 40%;
+  object-fit: cover;
+  margin: 0 auto;
+  margin-top: .5rem;
+  border-radius: 1.5rem;
+  z-index: 1;
+}
+
+.plane {
+  position: absolute;
+  top: .2rem;
+  width: 5%;
+  height: auto;
+  padding: .5rem;
+  animation: planeMove 13s ease-in-out 1s infinite alternate forwards;
+}
+
+
+/*====ANIMATION====*/
+
+@keyframes planeMove {
+  0% {left:0;}
+  100% {left: 95%;}     
+}
+
+
+
+
+
+/*------------*\
+*
+*  COMPONENTS
+*
+\*------------*/
+
+/*==== INFO BUTTON ====*/
+
+.info-btn {
+  display: inline;
+  align-self: center;
+  position: absolute;
+  bottom: 1rem;
+  width: 35%;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #038C8C;
+  font-size: .7rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.115rem;
+  text-align: center;
+  padding: .8rem 1.2rem;
+  background: #ffffff;
+  border-radius: 25px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.info-btn:hover {
+  background-color: #03A696;
+  color: #91D9CC;
+  font-size: 1rem;
+  transform: scale(1.05);
+  transition: .4s ease-in-out;
+}
+
+
+/*Back to top link*/
+
+#topButton {
+  text-decoration: none;
+  font-weight: 900;
+  color: #03A696
+}
+
+
+/*====HEADER COMPONENTS====*/
+
+/* 1. Top Navigation */
+
+nav {
+  width: 100%;
+  background-color: rgba(255, 255, 255, .4);
+  height: 30%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center; 
+  align-items: center;
+  vertical-align: middle;
+  font-family: 'Red Rose', cursive;
+  font-size: 0;
+}
+
+nav ul, nav li, nav a {
+  height: 100%;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #03A696;
+  font-size: 1.3rem;
+  padding: .5rem 1.2rem;
+  padding-top: .5rem;
+  margin: 0 2.5rem 0 2.5rem;
+}
+
+
+nav a:hover {
+  background-color: #03A696;
+  color: #91D9CC;
+  transition: .7s ease-in-out;
+  transform: scale(1.2);
+}
+
+
+/* 2. Contact Icons */
+
+section a {
+  font-size: 1.3rem;
+  padding: .3rem;
+  color: #ffffff;
+}
+
+i:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(10px 10px 10px #ffffff);
+}

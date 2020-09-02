@@ -1,0 +1,171 @@
+/*----------------*\
+*
+*   BASE STYLES
+*
+\*----------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  background-color: grey;
+}
+
+
+
+
+/*---------------*\
+*
+*  LAYOUT STYLES
+*
+\*---------------*/
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10vh, 1fr;
+  grid-template-areas: 
+    "header header header"
+    "main main main";
+  grid-gap: 10px;
+  height: 100vh; 
+}
+
+main {
+  grid-area: main;
+  height: 80vh;
+  background-color: pink;
+}
+
+
+/*====HEADER STYLES====*/
+
+header {
+  grid-area: header;
+  height: 15vh;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70%;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+}
+
+section {
+  width: 10%;
+  margin-right: .5rem;
+}
+
+
+
+/*----------------*\
+*
+*  CONTENT STYLES
+*
+\*----------------*/
+
+
+
+
+
+/*------------*\
+*
+*    IMAGES
+*
+\-------------*/
+
+#logo {
+  width: 5%;
+  height: auto;
+  display: inline-block;
+  padding: .3rem;
+  margin-left: .5rem;
+}
+
+
+
+
+
+/*--------------*\
+*
+*   TYPOGRAPHY
+*
+\*--------------*/
+
+/*====HEADER====*/
+
+h2 {
+  font-family: 'Zilla Slab', serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: .5rem;
+}
+
+small {
+  font-size: 1rem;
+  margin-left: 2.4rem;
+}
+
+
+
+
+
+/*------------*\
+*
+*  COMPONENTS
+*
+\*------------*/
+
+/*====HEADER COMPONENTS====*/
+
+/* 1. Top Navigation */
+
+nav {
+  width: 100%;
+  background-color: white;
+  height: 30%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center; 
+  align-items: center;
+  font-family: 'Red Rose', cursive;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #03A696;
+  font-size: 1.3rem;
+  margin-right: 5rem;
+  padding: .5rem;
+}
+
+
+/* 2. Contact Icons */
+
+section a {
+  font-size: 1.3rem;
+  padding: .3rem;
+  color: #ffffff;
+}
+
+i:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(10px 10px 10px #ffffff);
+}
