@@ -1,3 +1,208 @@
+/*------------*\
+*
+*  BASE STYLES
+*
+\*------------*/
+
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
+  font-size: 1rem;
+}
+
+
+.left {
+  width: 30vw;
+  height: 100vh;
+  background-color: #038C8C;
+  color: #91D9CC;
+}
+
+.right {
+  width: 70vw;
+  height: 100vh;
+  background: url('assets/elizeu-dias-xarhNpLSHTk-unsplash.jpg') no-repeat center center;
+  background-size: cover;
+  object-fit: cover;
+}
+
+
+li {
+  padding: 1rem;
+}
+
+
+
+
+
+/*---------------*\
+*
+*  LAYOUT STYLES
+*
+\*---------------*/
+
+.container {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 1fr, 2fr;
+  grid-template-rows: 100vh;
+  grid-template-areas: 
+    "left right";
+}
+
+
+.left, .right {
+  display: flex;
+  flex-flow:column;
+}
+
+.left {
+  grid-area: left;
+  align-items: center;
+  justify-content: center;
+}
+
+.right {
+  grid-area: right;
+  justify-content: space-around;
+}
+
+
+section {
+  align-self: center;
+  position: relative;
+  bottom: -6rem;
+}
+
+
+li i {
+  color: #FFEEE2;
+  padding-right: 1.5rem;
+}
+
+
+/*===== ON MOBILE =====*/
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas: 
+      "right"
+      "left";
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+  }
+  
+  .left, .right {
+    width: 100%;
+  }
+  
+  section {
+    bottom: -4rem;
+  }
+}
+
+
+
+
+
+/*----------*\
+*
+*   IMAGES
+*
+\*----------*/
+
+.logo {
+  width: 20%;
+  height: auto;
+  margin-bottom: 2.5rem;
+  padding: .3rem;
+  border: 2px solid #FFEEE2;
+  border-top-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+}
+
+
+/*===== ON MOBILE =====*/
+
+@media (max-width: 768px) {
+  .logo {
+    width: 35%;
+    height: auto;
+    margin-bottom: 30%;
+  }
+}
+
+
+
+
+
+/*-------------*\
+*
+*  TYPHOGRAPHY
+*
+\*-------------*/
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #038C8C;
+  text-align: center;
+}
+
+
+/*===== ON MOBILE =====*/
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+
+li a {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+h1, li a {
+  line-height: 1.2;
+  letter-spacing: .25rem;
+}
+
+
+
+
+
+/*------------*\
+*
+*  COMPONENTS
+*
+\*------------*/
+
+section a {
+  font-size: 1.3rem;
+  padding: .3rem;
+  color: #FFEEE2;
+}
+
+section i:hover {
+  transform: scale(1.5);
+}
+
+
+li a {
+  text-decoration: none;
+  color: #FFEEE2;
+}
+
+li a:hover {
+  background-color: #FFEEE2;
+  color: #038C8C;
+  padding: .5rem;
+  transition: .5s ease-in-out;
 }
