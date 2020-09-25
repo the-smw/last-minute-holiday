@@ -1,0 +1,232 @@
+/*-------------*\
+*
+*  BASE STYLES
+*
+\*-------------*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+/*---------------*\
+*
+*  LAYOUT STYLES
+*
+\*---------------*/
+
+/*====HEADER STYLES====*/
+
+header {
+  grid-area: header;
+  height: 12vh;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+}
+
+section {
+  width: 15%;
+  margin-right: .5rem;
+}
+
+
+nav {grid-area: nav;}
+
+
+/* HEADER ON MOBILE */
+
+@media(max-width: 768px) {
+  header {
+    width: 100%;
+    height: 20vh;
+  }
+}
+
+
+/*====TYPOGRAPHY====*/
+
+/* In header */
+
+h2 {
+  font-family: 'Zilla Slab', serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: .5rem;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.8rem;
+    text-align: right;
+  }
+}
+
+small {
+  font-size: 1rem;
+  margin-left: 2.5rem;
+}
+
+/* In footer */
+
+.footer-small {
+  font-family: 'Zilla Slab', serif;
+  font-size: 1rem;
+  color: #000000;
+  line-height: 1.2;
+  letter-spacing: .15rem;  
+}
+
+
+
+/*====FOOTER STYLES====*/
+
+footer {
+  grid-area: footer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+
+
+/*------------*\
+*
+*    IMAGES
+*
+\*------------*/
+
+#logo {
+  width: 5%;
+  height: auto;
+  display: inline-block;
+  padding: .5rem;
+  margin-left: .5rem;
+}
+
+@media (max-width: 768px) {
+  #logo {
+    width: 22%;
+  }
+}
+
+
+
+
+
+/*------------*\
+*
+*  COMPONENTS
+*
+\*------------*/
+
+/*====HEADER COMPONENTS====*/
+
+/* 1. Top Navigation */
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, .5);
+}
+
+nav li {
+  font-family: 'Red Rose', cursive;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  height: 2rem;
+  border-bottom: 1px solid #03A696; 
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  color: #03A696;  
+}
+
+
+nav a:hover {
+  background-color: #03A696;
+  color: #91D9CC;
+  transition: .7s ease-in-out;
+  transform: scale(1.2);
+}
+
+
+/* NAVIGATION ON PC */
+
+@media (min-width: 768px) {
+  nav {
+    font-size: 0;
+  }
+  
+  nav ul {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav li {
+    display: inline-block;
+    border-bottom: none;
+    width: 10%;
+    align-self: center;
+  }
+}
+
+
+
+/* 2. Contact Icons */
+
+section a {
+  font-size: 1rem;
+  padding: .3rem;
+  color: #ffffff;
+}
+
+i:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(10px 10px 10px #ffffff);
+}
+
+
+
+/*==== FOOTER COMPONENTS ====*/
+
+/*Back to top link*/
+
+#topButton, .aszf {
+  text-decoration: none;
+  font-weight: 900;
+  color: #03A696
+}
+
+.aszf {
+  color: black;
+}

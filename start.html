@@ -7,6 +7,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
   <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Red+Rose&family=Zilla+Slab:wght@500&display=swap" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3d47a07c59.js" crossorigin="anonymous"></script>
+  <script src="scripts.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="header-footer.css">
   <link rel="stylesheet" type="text/css" href="start-styles.css">
 </head>
 <body>
@@ -23,7 +26,8 @@
         <a class="contact" href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
       </section>
       </div>
-      <nav>
+    </header>
+    <nav>
         <ul>
           <li><a href="#">Főoldal</a></li>
           <li><a href="#">Hírek</a></li>
@@ -31,11 +35,84 @@
           <li><a href="#">Kapcsolat</a></li>
         </ul>
       </nav>
-    </header>
+      <div class="sidebar">
+        <div class="menu"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+        <ul class="dropdown-content">
+          <li><a href="#">Aktuális</a></li>
+          <li><a href="#">Külföldi utak</a></li>
+          <li><a href="#">Belföldi utak</a></li>
+          <li><a href="#">Fontos tudnivalók</a></li>
+          <li><a href="#">Rólunk</a></li>
+        </ul>
+      </div>
+      <div class="content">
+        <article class="actual">
+          <h1>Aktuális</h1>
+          <div class="last-min-banner">
+            <h3 class="last-min-heading">Last minute ajánlatok - <br>ne maradjon le!</h3>
+            <div class="go-to-offers-page">
+              <a id="next" target="_blank" href="offers.html"><i class="fas fa-plane"></i></a>
+              <span class="check-offers">Megnézem</span>
+            </div>
+          </div>
+          <h3>Új szolgáltatás</h3>
+          <div class="media-object city">
+            <img class="city-tour" src="assets/city.png" alt="city-tour">
+            <p>Az érdeklődésre való tekintettel és közkívánatra örömmel tájékoztatjuk kedves látogatóinkat, hogy 2021. februárjától kínálatunk új szolgáltatással bővül! Hamarosan lehetőségük nyílik egy-egy hétvégét eltölteni Európa nevezetes városainak valamelyikében, úgy, mint Párizsban, Grazban, Berlinben, vagy akár Lisszabonban.<br><br>Az ajánlat magában foglalja a szállást félpanziós ellátással, az utazási költséget (úticéltól függően busszal, vagy repülővel) és a magyar nyelvű idegenvezetést. A szabadon választható csoportos programokra vonatkozó belépőjegyek a helyszínen megvásárolhatók, az ezeken való részvétel opcionális.<br>Részletek hamarosan!</p>
+          </div>
+        </article>
+        <article class="abroad">
+          <h1>Külföldi utak</h1>
+          <p>A külföldi utak során a főszerep a tengerpartoké, a pihenésé és a kikapcsolódásé, gondosan ügyelve arra, hogy mindenki megtalálja emellett a neki leginkább megfelelő programlehetőségeket.<br>Szeretne elvonulni kicsit a mindennapok zajától, vagy inkább belevetné magát a nyüzsgő éjszakai életbe? Kisgyermekkel utazna vagy nem szeretné hátrahagyni négylábú társát? Koktélt szürcsölgetne egy homokos strandon vagy szívesebben kirándulna, túrázna?<br>Mindenre van egy ajánlatunk!</p>
+        </article>
+        <div class="program-banner">
+          <div class="row">
+            <div class="col">
+              <img src="assets/program-banner/douglas-lopez-Lf5Xzq6NvWw-unsplash.jpg" alt="teaser">
+            </div>
+            <div class="col">
+              <img src="assets/program-banner/ferran-feixas-uBflZCoXSt8-unsplash.jpg" alt="teaser">
+            </div>
+            <div class="col">
+              <img src="assets/program-banner/jeremy-banks-Z9q18W0cZBs-unsplash.jpg" alt="teaser">
+            </div>
+            <div class="col">
+              <img src="assets/program-banner/stephen-leonardi-knhr826qIMA-unsplash.jpg" alt="teaser">
+            </div>
+          </div>
+        </div>
+        <article class="inland">
+          <h1>Belföldi utak</h1>
+          <p>Belföldi ajánlataink tervezése során a fő célünk az volt, hogy a lehető legteljesebb mértékben megismertessük utazóinkat Magyarország kincseivel. Az ismert nevezetességek mellett szeretnénk megmutatni hazánk rejtett kis ékszerdobozait is, mint például Tatát, egy romantikus kisvárost a Gerecse lábánál, ahol az épített és természetes környezet szinte láthatatlanul olvad egybe.<br>Programajánlatunkat is úgy alakítottuk ki, hogy a turizmus éllovasai, a wellness, borászat és gyógyfürdők mellett a kirándulni, sportolni vágyók, és a kulturális élményekre szomjazók is elégedettek legyenek, sőt, a híres magyar gasztronómia szerelmesei is megtalálják számításaikat.</p>
+        </article>
+        <article class="important-info">
+          <h1>Fontos tudnivalók</h1>
+          <p>Az európai utazásokkal kapcsolatos információkról és érvényben lévő jogszabályokról az <a href="https://konzuliszolgalat.kormany.hu/europa-utazasi-tanacsok"> alábbi oldalon</a> tájékozódhat.<br>További kérdésével forduljon hozzánk bizalommal az <a class="highlight" href="#">info@tengerszem.hu</a> e-mail címen.</p>
+        </article>
+        <article class="about-us">
+          <h1>Rólunk</h1>
+          <div class="media-object">
+            <img class="profile-pic" src="assets/szabo-piroska.jpg" alt="szabo-piroska">
+            <p>Üdvözlöm!<br><br>Szabó Piroska vagyok, a <span class="highlight">Tengerszem utazási iroda</span> megálmodója.<br><br>Amikor 11 éve egy kedves barátommal és azóta üzlettársammal belevágtunk ebbe a vállalkozásba, az a cél lebegett a szemünk előtt, hogy egy csokorba gyűjtsük a legkedvezőbb ajánlatokat a leggyönyörűbb tengerpartokon.<br><br>Hiszünk abban, hogy egy utazási iroda munkája nem merül ki pusztán az utazások megszervezésében és megfelelő lebonyolításában, hanem feladata az is, hogy ezt egy fantasztikus élménnyé varázsolja a kedves utazó számára.<br><br>Szeretnénk, ha minden utazásunk egy életreszóló emlék lenne az azokon résztvevőknek, legyen szó akár az első, vagy akár a századik alkalomról, hogy magával ragadja a tenger látványa.<br><br>Habár az évek során kínálatunk több új szolgáltatással is bővült, elképzelésünk változatlan és továbbra is szívvel-lélekkel dolgozunk azon, hogy álmokat váltsunk valóra.</p>
+          </div>
+        </article>   
+      </div>
+      <div class="right-col">
+        <h4>Kiemelt partnereink</h4>
+        <ul class="partners">
+          <li><a href="#">Pixel Taxi</a></li>
+          <li><a href="#">Wheels 4 U Busztársaság</a></li>
+          <li><a href="#">Magyar Posta - PostaBiztosító</a></li> 
+          <li><a href="#">Álomvölgy Turisztikai Egyesület</a></li> 
+          <li><a href="#">JetFlex Légitársaság</a></li> 
+          <li><a href="#">DunaResort szállodalánc</a></li> 
+        </ul>
+        <a class="top-link" id="js-top" href="#top"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+      </div>
+    <footer>
+      <p class="footer-small"><a id="topButton" href="#top">Vissza az oldal tetejére</a> | ©Tengerszem utazási iroda | <a class="aszf" href="#">ÁSzF</a> | Impresszum</p>
+    </footer>
   </div>
-    <main>
-      <h1>Hello</h1>
-    </main>
 
 </body>
 </html>
