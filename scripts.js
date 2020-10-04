@@ -17,7 +17,7 @@ window.addEventListener("scroll", scrollFunc);
 const scrollToTop = () => {
   const c = document.documentElement.scrollTop || document.body.scrollTop;
   if (c > 0) {   window.requestAnimationFrame(scrollToTop);
-              window.scrollTo(0, c - c / 20);
+              window.scrollTo(0, c - c / 30);
   }
 };
 
@@ -26,3 +26,17 @@ scrollToTopButton.onclick = function(e) {
   e.preventDefault();
   scrollToTop();
 }
+
+
+
+
+
+//Dropdown menu
+
+$(document).ready(function(){
+  $(".menu").click(function() {
+    $(".dropdown-content").show("linear");
+  });
+});
+                  
+                  

@@ -1,0 +1,182 @@
+/*-----------*\
+*
+* BASE STYLES
+*
+\*-----------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;  
+}
+
+
+header {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url('assets/clams2.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;  
+}
+
+
+/*-----------*\
+*
+*   LAYOUT
+*
+\*----------*/
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr auto auto 1fr;
+  grid-template-columns: 100%;
+  grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-gap: 5px;
+}
+
+
+@media (min-width: 1024px) {
+  .container {
+    height: 100vh;
+  }
+}
+
+
+
+/* Grid areas */
+header {grid-area: header;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+
+
+.contact-us, .follow-us {
+  width: 100%;
+}
+
+
+@media (min-width: 1200px) {
+  .contact-us {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 5vh;
+  }
+}
+
+
+
+.follow-us {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;  
+}
+
+@media (min-width: 1024px) {
+  .follow-us {
+    justify-content: center;
+  }
+  
+  .social {
+    padding-right: 4vh;
+  }
+}
+
+
+
+.phone, .email, .address {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+
+
+
+
+/*----------*\
+*
+*   IMAGES
+*
+\*----------*/
+
+
+
+
+
+
+
+/*----------*\
+*
+* TYPOGRAPHY
+*
+\*----------*/
+
+h1 {
+  font-family: 'Zilla Slab', cursive;
+  font-size: 3vh;
+  line-height: 1.2;
+  letter-spacing: .125rem;
+  font-weight: 600;
+  color: #038C8C;
+  text-align: center;
+  margin: 1vh 1vh 0 1vh;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+
+h4 {
+  font-family: 'Red Rose', cursive;
+  font-size: 2.5vh;
+  line-height: 1.1;
+  letter-spacing: .01rem;
+  
+}
+
+.data {
+  font-size: 2vh;
+  line-height: 1.5;
+  letter-spacing: .025rem;
+}
+
+
+.social {
+  color: #A66641;
+  font-size: 5vh;
+}
+
+
+.contact-img {
+  font-size: 15vh;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  color: #A6A6A6;
+}
+
+
+
+/* Text decoration */
+
+.active {
+  color: #03A696;
+  background-color: #91D9CC;
+  font-weight: 700;
+}

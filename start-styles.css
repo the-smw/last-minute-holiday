@@ -16,7 +16,15 @@ body {
 
 
 header {
-  background-color: #038C8C;
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url('assets/clams2.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;  
 }
 
 
@@ -26,6 +34,14 @@ header {
   height: 50%;
   margin-top: 20%;
 }
+
+@media (max-width: 768px) {
+  .dropdown-content {
+    margin-top: 0;
+    margin-left: 1rem;
+  }
+}
+
 
 .dropdown-content li {
   padding: 1rem;
@@ -43,8 +59,14 @@ header {
 .menu {
   padding: 1rem;
   color: #91D9CC;
+  background-color: #038C8C;
+  cursor: pointer;
   display: none;
 }
+
+
+
+
 
 
 /* Main content styles */
@@ -138,6 +160,7 @@ h1, p {
   
   .dropdown-content {
     display: none;
+    position: static;
   }
 }
 
@@ -400,6 +423,13 @@ footer p {
 .partners a:hover, .highlight, article a {
   color: #038C8C;
   font-weight: 600;
+}
+
+
+.active {
+  color: #03A696;
+  background-color: #91D9CC;
+  font-weight: 700;
 }
 
 
