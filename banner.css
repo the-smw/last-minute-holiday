@@ -1,0 +1,116 @@
+/* Last minute banner styles */
+
+.last-min-banner {
+  border-radius: 10px;
+  width: 90%;
+  height: 20vh;
+  margin: 0 auto;
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('assets/banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@media (max-width: 1024px) {
+  .last-min-banner {
+    width: 90%;
+    height: 25vh;
+    background-image: 
+      linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.4)
+    ),
+      url('assets/banner-mobile.jpg');
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+
+.go-to-offers-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+
+
+
+/* Last minute banner typography */
+
+.last-min-heading {
+  padding: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: .3rem;
+  font-size: 3rem;
+  font-family: 'Red Rose', cursive; 
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+
+@media (max-width: 540px) {
+  .last-min-heading {
+    padding: .5rem;
+    font-size: 1.125rem;
+    letter-spacing: .2rem;
+    font-weight: 600;
+  }
+}
+
+@media (min-width: 768px) {
+  .last-min-heading {
+    font-size: 2.225rem;
+  }
+}
+
+
+#next {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  padding: 1rem 1.5rem;
+  margin-right: .5rem;  
+  font-size: 2.8rem;
+}
+
+
+@media (max-width: 540px) {
+  #next {
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    margin-top: .3rem
+  }
+}
+
+
+.check-offers {
+  font-family: 'Red Rose', cursive;
+  color: #ffffff;
+  padding: .5rem;
+  padding-top: .5rem; 
+  line-height: 1.2;
+  letter-spacing: .125rem;
+}
+
+
+@media (max-width: 540px) {
+  .check-offers {
+    padding-top: .2rem;
+    letter-spacing: .1rem;
+    line-height: 1;
+    font-size: .8rem;
+  }
+}

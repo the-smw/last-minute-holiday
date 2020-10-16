@@ -1,0 +1,435 @@
+/*-----------*\
+*
+* BASE STYLES
+*
+\*-----------*/
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;  
+  height: 100vh;
+  background-image:
+      linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.4)
+    ), url('assets/pineapple.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-image:
+      linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.4)
+    ), url('assets/globe.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  }
+}
+
+
+
+footer {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+/*-----------*\
+*
+*   LAYOUT
+*
+\*-----------*/
+
+.container {
+  display: grid;
+  grid-template-rows: 15vh 1fr auto 5vh;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-gap: 5px;
+  height: 100vh;
+
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;   
+    grid-template-areas: 
+      "header"
+      "nav"
+      "main"
+      "footer";
+  }
+}
+
+
+/*Grid-areas*/
+
+header {grid-area: header;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+.left {grid-area: left;}
+.right {grid-area: right;}
+
+
+
+
+/* Styles for the destination boxes */
+
+
+.content {
+  width: 100%;
+}
+
+
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  height: 16.5vh;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 252, 255, 0.6);
+}
+
+
+@media (min-width: 768px) {
+  .box {
+    max-width: 700px;
+    height: 15vh;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .content {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat (2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "left right";   
+  }
+  
+  .box {
+    max-width: 600px;
+  }
+}
+
+
+
+.details {
+  width: 50%;
+  align-self: flex-start;
+}
+
+@media (min-width: 1200px) {
+  .details {
+    width: 60%;
+  }
+}
+
+
+
+
+
+/*------------*\
+*
+*  TYPOGRAPHY
+*
+\*------------*/
+
+
+nav ul li a {
+  color: #A66641;
+}
+
+
+h1 {
+  font-family: 'Red Rose', cursive;
+  font-size: 4vh;
+  letter-spacing: .2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  color: #ffffff;
+}
+
+
+h2 {
+  color: #ffffff;
+}
+
+
+h4 {
+  font-size: 2vh;
+  font-weight: 600;
+  color: #A66641;
+  padding-top: .5rem;
+  line-height: 1.1;
+  letter-spacing: .1rem;
+}
+
+
+p {
+  font-size: 2vh;
+  line-height: 1.1;
+  padding: .1rem;
+}
+
+
+.box-icon {
+  color: #03A696;
+}
+
+
+.info {
+  margin-left: 0;
+  font-size: 1.1vh;
+}
+
+
+.type-button {
+  text-decoration: none;
+  color: #03A696;
+  font-size: 2.5vh;
+    font-weight: 600;
+}
+
+
+
+.forward {
+  color: pink;
+}
+
+
+
+
+
+/*----------*\
+*
+*   IMAGES
+*
+\*----------*/
+
+.destination {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  width: 35%;
+  height: 12vh;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: grayscale(60%);
+}
+
+.destination:hover {
+  filter: grayscale(0%);
+  transition: 1.5s ease;
+}
+
+
+
+/*------------*\
+*
+*  COMPONENTS
+*
+\*------------*/
+
+/* 1. Travel type navigation styles */
+
+
+.list-nav {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.abroad, .inland {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(145, 217, 204, 0.7);
+  border-radius: 10px;
+}
+
+.abroad {
+  margin-bottom: .5rem;
+}
+
+
+@media (min-width: 768px) {
+  .list-nav {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+  
+  .abroad, .inland {
+    width: 30%;
+    padding: .5rem;
+  }
+  
+  .abroad {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .list-nav {
+    display: none;
+  }
+}
+
+
+
+
+/* 2. Forward button */
+
+.forward {
+  display: inline-block;
+  float: right;
+  text-decoration: none;
+  text-align: center;
+  background-color: #03A696;
+  color: #91D9CC;
+  line-height: 1.1;
+  padding: .3rem .8rem;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 10px;
+}
+
+.forward:hover {
+  transform: scale(1.1);
+  transition: .5s ease-in-out;
+}
+
+
+/* 3. Active class for main navigation */
+
+.active {
+  color: #03A696;
+  background-color: #91D9CC;
+  font-weight: 700;
+}
+
+
+
+
+/* 4. Banner size on pc */
+
+@media (min-width: 1200px) {
+  .last-min-banner {
+    width: 70%;
+    margin-top: 2rem;
+  }
+}
+
+
+
+/* 5. Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+  opacity: 10%;
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #038C8C; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+
+/* 6. Back to top button for mobile and tablet */
+
+
+body {
+  position: relative;
+}
+  
+.top-link {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;;
+  border-radius: 50%;
+  padding: .3rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 3vh;
+  text-decoration: none;
+  color: #038C8C;
+  background-color: #91D9CC;
+  opacity: .8;
+}
+
+
+@media (max-width: 1024px) {
+  .top-link {
+    display: inline-flex;
+  }
+}
+
+
+.top-link:hover {
+  background-color: #03A696;
+  color: #91D9CC;
+}
+
+
+
+/* Classes for JS */
+
+.show {
+  visibility: visible;
+  opacity: .8;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+}

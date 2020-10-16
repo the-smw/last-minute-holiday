@@ -100,7 +100,7 @@ h1, p {
 
 .container {
   display: grid;
-  grid-template-rows: 1fr 1fr auto 1fr;
+  grid-template-rows: 15vh 1fr auto 5vh;
   grid-template-columns: 200px 1fr 200px;
   grid-template-areas: 
     "header header header"
@@ -116,7 +116,7 @@ h1, p {
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
-    
+    grid-template-rows: auto;
     grid-template-areas: 
       "header"
       "nav"
