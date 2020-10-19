@@ -129,13 +129,14 @@ li i {
 
 /*===== ON MOBILE =====*/
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .logo {
     width: 35%;
     height: auto;
     margin-bottom: 30%;
   }
 }
+
 
 
 

@@ -20,7 +20,9 @@ body {
 }
 
 
-
+header {
+  background-color: rgba(255, 255, 255, 0.4);
+}
 
 
 /*---------------*\
@@ -40,28 +42,39 @@ body {
     "box1 box2 box3"
     "box4 box5 box6"
     "footer footer footer";
-  grid-gap: 1rem;
   justify-items: center;
   height: 100%;
   width: 100%;
+  grid-gap: 2vh;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .container {
     grid-template-areas: 
-      "header"
-      "nav"
-      "headline"
-      "box1"
-      "box2"
-      "box3"
-      "box4"
-      "box5"
-      "box6"
-      "footer";
-    grid-template-rows: repeat(6, 1fr);
+      "header header"
+      "nav nav"
+      "headline headline"
+      "box1 box2"
+      "box3 box4"
+      "box5 box6"
+      "footer footer";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 }
+
+
+
+nav li {
+  margin-bottom: 0;
+}
+
+
+
+footer p {
+  align-self: flex-end;
+}
+
 
 
 
