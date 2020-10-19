@@ -1,0 +1,518 @@
+/*-----------*\
+*
+* BASE STYLES
+*
+\*-----------*/
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;  
+  height: 100vh;
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url('assets/world-clock.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;  
+}
+
+
+
+
+footer {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
+
+/*-----------*\
+*
+*   LAYOUT
+*
+\*-----------*/
+
+.container {
+  display: grid;
+  grid-template-rows: 15vh 1fr auto 5vh;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+  grid-gap: 5px;
+  height: 100vh;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;   
+    grid-template-areas: 
+      "header"
+      "nav"
+      "main"
+      "footer";
+  }
+}
+
+
+/*Grid-areas*/
+
+header {grid-area: header;}
+nav {grid-area: nav;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+.left {grid-area: left;}
+.right {grid-area: right;}
+
+
+
+.content {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 
+    "left right";
+}
+
+@media (max-width: 1024px) {
+  .content {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "left"
+      "right";
+  }
+}
+
+
+
+.left, .right {
+  width: 100%;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+}
+
+
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vh;
+}
+
+
+/* ===== ARTICLE AND SIDEBAR STYLES ==== */
+
+article, .sidebar {
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 7vh;
+}
+
+
+@media (min-width: 1024px) {
+  article, .sidebar {
+    width: 90%;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  article {
+    width: 70%;
+  }
+  
+  .sidebar {
+    width: 100%;
+  }
+}
+
+
+
+.featured {
+  position: relative;
+  height: 40vh;
+  background-image:
+      linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ), url('assets/summer.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #ffffff;
+}
+
+
+
+
+
+/* Small post styles in sidebar */
+
+.headline {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6vh;
+  background-color: #03A696;
+  margin-bottom: 1.5rem;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+
+.post {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding: .5rem;
+}
+
+
+
+
+
+/*----------*\
+*
+* TYPOGRAPHY
+*
+\*----------*/
+
+/* Single-direction margin declaration */
+
+h1, h3, p, .data-text,
+.article-img {
+  margin-bottom: 1rem;
+}
+
+
+footer p {
+  margin-bottom: 0;
+}
+
+
+h1 {
+  font-family: 'Red Rose', cursive;
+  font-size: 4vh;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+h3 {
+  font-size: 3.3vh;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+  
+
+h4 {
+  font-size: 3vh;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+  color: #91D9CC;
+}
+
+
+h5 {
+  font-size: 2.4vh;
+  font-weight: 700;
+  margin-bottom: .3rem;
+  line-height: 1.1;
+}
+
+
+@media (min-width: 1200px) {
+  h5 {
+    font-size: 2vh;
+  }
+}
+
+
+
+p {
+  font-size: 2.5vh;
+  line-height: 1.1;
+  text-align: justify;
+}
+
+
+@media (min-width: 1200px) {
+  p {
+    font-size: 2.2vh;
+  }
+}
+
+
+
+.data-text {
+  font-size: 1.8vh;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #038C8C;
+  letter-spacing: .125rem;
+  margin-bottom: 1rem;
+}
+
+.featured .data-text {
+  color: #ffffff;
+}
+
+
+.subhead {
+  font-size: 2vh;
+  margin-left: 0;
+}
+
+
+.post-text {
+  font-size: 2.3vh;
+}
+
+
+@media (min-width: 1200px) {
+  .post-text {
+    font-size: 1.9vh
+  }
+}
+
+
+
+
+/*----------*\
+*
+*   IMAGES
+*
+\*----------*/
+
+.article-img {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+
+
+@media (min-width: 1024px){
+  .article-img {
+    height: 30vh;
+  }
+}
+
+
+.post-img {
+  width: 15vh;
+  height: 15vh;
+  object-fit: cover;
+  margin-right: .5rem;
+  border-radius: 10px;
+}
+
+
+@media (min-width: 1200px) {
+  .post-img {
+    width: 10vh;
+    height: 10vh;
+  }
+}
+
+
+
+/*------------*\
+*
+*  COMPONENTS
+*
+\*------------*/
+
+/* 1. More button in articles */
+
+.more {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.5vh;
+  font-weight: 900;
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+  color: #038C8C;
+  border: 2px solid #038C8C;
+  border-radius: 15px;
+  padding: .5rem 1rem;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+
+.more:hover {
+  transform: scale(1.1);
+  background-color: #038C8C;
+  color: #91D9CC;
+  transition: .5s ease-in-out;
+}
+
+
+
+/* 2. Check offers button */
+
+.go-to-offers {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+
+.go-to-offers:hover {
+  background-color: #ffffff;
+  color: #A66641;
+}
+
+
+
+/* 3. Previous news button */
+
+.previous-news {
+  background-color: #038C8C;
+  color: #91D9CC;
+}
+
+
+
+/* 4. Sidebar button */
+
+.side {
+  display: inline;
+  align-self: flex-end;
+  max-width: 40%;
+  margin: 1rem 1rem 1rem 0;
+}
+
+
+
+/* 5. Active class for main navigation */
+
+.active {
+  color: #03A696;
+  background-color: #91D9CC;
+  font-weight: 700;
+}
+
+
+
+/* 6. Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff; 
+  opacity: 10%;
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #038C8C; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
+
+
+/* 7. Back to top button for mobile and tablet */
+
+
+body {
+  position: relative;
+}
+  
+.top-link {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;;
+  border-radius: 50%;
+  padding: 2.3vh;
+  width: 3rem;
+  height: 3rem;
+  font-size: 3vh;
+  text-decoration: none;
+  color: #038C8C;
+  background-color: #91D9CC;
+  opacity: .8;
+}
+
+
+@media (max-width: 1024px) {
+  .top-link {
+    display: inline-flex;
+  }
+}
+
+
+.top-link:hover {
+  background-color: #03A696;
+  color: #91D9CC;
+}
+
+
+
+/* Classes for JS */
+
+.show {
+  visibility: visible;
+  opacity: .8;
+}
+
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
